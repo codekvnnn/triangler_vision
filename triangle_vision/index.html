@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" overflow="hidden" xmlns="http://www.w3.org/2000/svg">
+    <use href="#triangle" x="128" y="320" stroke-width="2" opacity="0.3">
+        <animate attributeName="stroke" dur="6s" repeatCount="indefinite"
+            values="#FF9AA2;#FFB7B2;#FFDAC1;#E2F0CB;#B5EAD7;#C7CEEA;#FF9AA2"/>
+    </use>
+
+    <rect width="512" height="512" y="384" fill="url(#fade)"/>
+    <use href="#triangle" x="128" y="128" stroke-width="2">
+        <animate attributeName="stroke" dur="6s" repeatCount="indefinite"
+            values="#FF9AA2;#FFB7B2;#FFDAC1;#E2F0CB;#B5EAD7;#C7CEEA;#FF9AA2"/>
+    </use>
+
+    <defs>
+        <polygon id="triangle" points="128,128 256,0 384,128" stroke-linejoin="round" stroke-width="16" fill="url(#stars)">
+            <animate attributeName="points" dur="1.5s" repeatCount="indefinite" calcMode="spline"
+                keyTimes="0;0.5;0.5;1"
+                keySplines="0.8 0.2 0.6 0.9;
+                            0.8 0.2 0.6 0.9;
+                            0.8 0.2 0.6 0.9"
+                values="128,128 256,0 384,128;
+                        152,152 240,72 328,152;
+                        240,72 152,152 328,152;
+                        128,128 256,0 384,128"/>
+        </polygon>
+
+        <linearGradient id="fade" gradientTransform="rotate(90)">
+            <stop offset="0" stop-color="#14141700"/>
+            <stop offset="0.25" stop-color="#141417ff"/>
+        </linearGradient>
+        <linearGradient id="sky" gradientTransform="rotate(90)">
+            <stop offset="0.5" stop-color="#141417"/>
+            <stop offset="1" stop-color="#40354a"/>
+        </linearGradient>
+
+        <!-- STARS PATTERN -->
+        <pattern id="stars" x="0" y="0" width="50%" height="50%" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <rect width="256" height="256" fill="url(#sky)"/>
+            <!-- Add your star patterns here -->
+        </pattern>
+    </defs>
+</svg>
